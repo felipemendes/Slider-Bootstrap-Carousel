@@ -64,3 +64,11 @@ function bootstrap_carouse_for_wordpress_init()
 	); 
 	register_post_type('bootstap_carousel', $args);
 }
+
+/* Thumbnails support */
+
+add_theme_support('post-thumbnails');
+
+/* Meta Box */
+
+include 'includes/meta-box.php';

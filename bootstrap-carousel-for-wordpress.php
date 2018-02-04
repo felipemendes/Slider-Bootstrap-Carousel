@@ -72,3 +72,7 @@ add_theme_support('post-thumbnails');
 /* Meta Box */
 
 include 'includes/meta-box.php';
+
+/* Taxonomy Category */
+
+include 'includes/taxonomy-category.php';

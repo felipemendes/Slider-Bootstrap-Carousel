@@ -80,3 +80,7 @@ include 'includes/taxonomy-category.php';
 /* Bootstrap n jQuery imports */
 
 include 'includes/plugin-scripts.php';
+
+/* Shortcode */
+
+include 'includes/shortcode.php';

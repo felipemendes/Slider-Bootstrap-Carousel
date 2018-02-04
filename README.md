@@ -1,5 +1,5 @@
 # Bootstrap Carousel for WordPress
-Bootstrap Carousel 4 for WordPress with image link and categories
+Bootstrap Carousel v4.0.0 for WordPress with image link and categories. This plugin imports jQuery 3.3.1 JS, Bootstrap 4 CSS and JS. Shortcode [bootstrap_carousel] or [bootstrap_carousel category='your-category']
 
 # Installation
 

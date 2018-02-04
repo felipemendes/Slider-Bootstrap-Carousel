@@ -76,3 +76,7 @@ include 'includes/meta-box.php';
 /* Taxonomy Category */
 
 include 'includes/taxonomy-category.php';
+
+/* Bootstrap n jQuery imports */
+
+include 'includes/plugin-scripts.php';

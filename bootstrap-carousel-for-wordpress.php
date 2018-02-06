@@ -21,11 +21,10 @@
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       bootstrap-carousel-for-wordpress
- * Domain Path:       /languages
  */
 
-add_action('init', 'bootstrap_carouse_for_wordpress_init');
-function bootstrap_carouse_for_wordpress_init()
+add_action('init', 'bcfw_bootstrap_carouse_for_wordpress_init');
+function bcfw_bootstrap_carouse_for_wordpress_init()
 {
 	$singular 	= 'Carousel';
 	$plural 	= 'Carousels';
@@ -71,16 +70,16 @@ add_theme_support('post-thumbnails');
 
 /* Meta Box */
 
-include 'includes/meta-box.php';
+include 'includes/bcfw-meta-box.php';
 
 /* Taxonomy Category */
 
-include 'includes/taxonomy-category.php';
+include 'includes/bcfw-taxonomy-category.php';
 
 /* Bootstrap n jQuery imports */
 
-include 'includes/plugin-scripts.php';
+include 'includes/bcfw-plugin-scripts.php';
 
 /* Shortcode */
 
-include 'includes/shortcode.php';
+include 'includes/bcfw-shortcode.php';

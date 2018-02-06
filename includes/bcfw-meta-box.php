@@ -2,22 +2,22 @@
 
 /* Meta Box: Additional Information */
 
-function add_meta_info_bootstap_carousel()
+function bcfw_add_meta_info_bootstap_carousel()
 {
 	add_meta_box(
 		'info_bootstap_carousel',
 		'Additional Information',
-		'info_bootstap_carousel_view',
+		'bcfw_info_bootstap_carousel_view',
 		'bootstap_carousel',
 		'normal',
 		'high'
 	);
 }
-add_action('add_meta_boxes', 'add_meta_info_bootstap_carousel');
+add_action('add_meta_boxes', 'bcfw_add_meta_info_bootstap_carousel');
 
 /* Meta Box styles */
 
-function info_bootstap_carousel_view( $post )
+function bcfw_info_bootstap_carousel_view( $post )
 { 
 	$bootstap_carousel_meta_data = get_post_meta( $post->ID );
 	?>
@@ -30,10 +30,10 @@ function info_bootstap_carousel_view( $post )
 
 /* Update Post Meta: Additional Information */
 
-function save_meta_info_bootstap_carousel( $post_id )
+function bcfw_save_meta_info_bootstap_carousel( $post_id )
 {
 	if( isset($_POST['link_id']) ) {
 		update_post_meta( $post_id, 'link_id', sanitize_text_field( $_POST['link_id'] ) );
 	}
 }
-add_action('save_post', 'save_meta_info_bootstap_carousel');
+add_action('save_post', 'bcfw_save_meta_info_bootstap_carousel');

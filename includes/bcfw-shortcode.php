@@ -2,7 +2,7 @@
 
 /* Shortcode */
 
-function bootstrap_carousel_function( $atts )
+function bcfw_bootstrap_carousel_function( $atts )
 {
 	extract( shortcode_atts( array( 'category' => '' ), $atts ) );
 
@@ -81,4 +81,4 @@ function bootstrap_carousel_function( $atts )
 	
 <?php
 }
-add_shortcode('bootstrap_carousel', 'bootstrap_carousel_function');
+add_shortcode('bootstrap_carousel', 'bcfw_bootstrap_carousel_function');

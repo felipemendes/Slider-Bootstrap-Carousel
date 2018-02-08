@@ -1,19 +1,27 @@
-=== Bootstrap Carousel for WordPress ===
+=== Slider Bootstrap Carousel ===
 Contributors: Felipe Mendes
+Donate link: https://github.com/FelipeMendes
 Tags: boostrap, boostrap carousel, bootstrap slider, responsive slider, responsive banner, casousel, slider
-Requires at least: 4.0.0
+Requires at least: 3.0.1
 Tested up to: 4.9.2
 Stable tag: 4.9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Bootstrap Carousel 4 for WordPress with image link and categories.
+Slider Bootstrap Carousel 4 for WordPress with image link and categories.
 
 == Description ==
 
-Bootstrap Carousel v4.0.0 for WordPress with image link and categories. This plugin imports jQuery 3.3.1 JS, Bootstrap 4 CSS and JS. Shortcode [bootstrap_carousel] or [bootstrap_carousel category='your-category']
+Slider Bootstrap Carousel v4.0.0 for WordPress with image link and categories. This plugin imports Bootstrap 4 CSS and JS. Shortcode [slider_bootstrap_carousel] or [slider_bootstrap_carousel category='your-category']
 
 == Installation ==
 
-1. Upload the plugin folder 'bootstrap-carousel-for-wordpress' into the '/wp-content/plugins/' directory.
-2. Activate the plugin through the 'Plugins' screen in WordPress
+1. Upload 'slider-bootstrap-carousel' to the '/wp-content/plugins/' directory
+2. Activate the plugin through the 'Plugins' menu in WordPress
+3. Place '[slider_bootstrap_carousel]' in your templates
+
+== Screenshots ==
+ 
+1. Sliders list on Admin Page
+2. Add new slider with image except, link and category
+3. Display Shortcode [slider_bootstrap_carousel] or [slider_bootstrap_carousel category='your-category']

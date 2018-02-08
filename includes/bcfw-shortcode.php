@@ -2,12 +2,12 @@
 
 /* Shortcode */
 
-function bcfw_bootstrap_carousel_function( $atts )
+function bcfw_slider_bootstrap_carousel_function( $atts )
 {
 	extract( shortcode_atts( array( 'category' => '' ), $atts ) );
 
 	$args = array(
-		'post_type' => 'bootstap_carousel',
+		'post_type' => 'bootstrap_carousel',
 		'orderby' 	=> 'date',
 		'status' 	=> 'publish',
 		'limit' 	=> -1
@@ -30,7 +30,7 @@ function bcfw_bootstrap_carousel_function( $atts )
 	$count = 0;
 	?>
 
-	<div id="bootstrap-carousel" class="carousel slide" data-ride="carousel">
+	<div id="slider-bootstrap-carousel" class="carousel slide" data-ride="carousel">
 
 		<ol class="carousel-indicators">
 			<?php
@@ -38,7 +38,7 @@ function bcfw_bootstrap_carousel_function( $atts )
 				$bulletClass = "";
 				if ( $count == 0 ) $bulletClass = "active";
 				?>
-					<li data-target="#bootstrap-carousel" data-slide-to="<?=$count?>" class="<?=$bulletClass?>"></li>
+					<li data-target="#slider-bootstrap-carousel" data-slide-to="<?=$count?>" class="<?=$bulletClass?>"></li>
 				<?php
 				$count++;
 			endwhile; endif;
@@ -54,6 +54,7 @@ function bcfw_bootstrap_carousel_function( $atts )
 				if ($first) $first = false;
 				?>
 					<div class="carousel-<?=$item_class?>">
+
 						<?php if ( !empty ($link ) ) : ?>
 							<a href="<?=$link;?>">
 								<?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
@@ -61,7 +62,15 @@ function bcfw_bootstrap_carousel_function( $atts )
 						<?php else: ?>
 							<?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
 						<?php endif; ?>
-					</div>	
+
+						<?php if ( has_excerpt() ) : ?>
+							<div class="carousel-caption d-none d-md-block">
+								<h5><?=the_title();?></h5>
+								<p><?=the_excerpt();?></p>
+							</div>
+						<?php endif; ?>
+
+					</div><!-- carousel-item -->
 				<?php
 				$i++;
 			endwhile; endif;
@@ -69,16 +78,16 @@ function bcfw_bootstrap_carousel_function( $atts )
 			?>
 		</div><!-- carousel-inner -->
 		
-		<a class="carousel-control-prev" href="#bootstrap-carousel" role="button" data-slide="prev">
+		<a class="carousel-control-prev" href="#slider-bootstrap-carousel" role="button" data-slide="prev">
 			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 			<span class="sr-only">Previous</span>
 		</a>
-		<a class="carousel-control-next" href="#bootstrap-carousel" role="button" data-slide="next">
+		<a class="carousel-control-next" href="#slider-bootstrap-carousel" role="button" data-slide="next">
 			<span class="carousel-control-next-icon" aria-hidden="true"></span>
 			<span class="sr-only">Next</span>
 		</a>
-	</div><!-- #bootstrap-carousel -->
+	</div><!-- #slider-bootstrap-carousel -->
 	
 <?php
 }
-add_shortcode('bootstrap_carousel', 'bcfw_bootstrap_carousel_function');
+add_shortcode('slider_bootstrap_carousel', 'bcfw_slider_bootstrap_carousel_function');

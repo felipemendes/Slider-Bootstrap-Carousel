@@ -2,7 +2,7 @@
 
 /* Taxonomy Category */
 
-function bcfw_bootstrap_carousel_category()
+function bcfw_slider_bootstrap_carousel_category()
 {
 	$singular = 'Category';
 	$plural = 'Categories';
@@ -36,6 +36,6 @@ function bcfw_bootstrap_carousel_category()
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'taxonomy_category', array( 'bootstap_carousel' ), $args );
+	register_taxonomy( 'taxonomy_category', array( 'bootstrap_carousel' ), $args );
 }
-add_action( 'init', 'bcfw_bootstrap_carousel_category', 0 );
+add_action( 'init', 'bcfw_slider_bootstrap_carousel_category', 0 );

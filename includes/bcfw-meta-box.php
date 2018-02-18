@@ -20,10 +20,14 @@ add_action('add_meta_boxes', 'bcfw_add_meta_info_slider_bootstrap_carousel');
 function bcfw_info_slider_bootstrap_carousel_view( $post )
 { 
 	$slider_bootstrap_carousel_meta_data = get_post_meta( $post->ID );
+	$value = '';
+	if( isset($slider_bootstrap_carousel_meta_data['link_id'][0]) ){
+		$value = $slider_bootstrap_carousel_meta_data['link_id'][0];
+	}
 	?>
 	<div>
 		<label for="slider_bootstrap_carousel_link_input">Image link:</label>
-		<input id="slider_bootstrap_carousel_link_input" type="text" name="link_id" style="width:100%;" value="<?= $slider_bootstrap_carousel_meta_data['link_id'][0]; ?>">
+		<input id="slider_bootstrap_carousel_link_input" type="text" name="link_id" style="width:100%;" value="<?= $value; ?>">
 	</div>
 	<?php
 }

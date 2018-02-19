@@ -72,7 +72,7 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 
 					</div><!-- carousel-item -->
 				<?php
-				$i++;
+				$count++;
 			endwhile; endif;
 			wp_reset_postdata();
 			?>

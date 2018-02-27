@@ -41,7 +41,6 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 					<li data-target="#slider-bootstrap-carousel" data-slide-to="<?=$count?>" class="<?=$bulletClass?>"></li>
 				<?php
 				$count++;
-				echo $count;
 			endwhile; endif;
 			wp_reset_query();
 			?>

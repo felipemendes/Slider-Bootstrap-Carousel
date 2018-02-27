@@ -21,12 +21,10 @@ function bcfw_info_slider_bootstrap_carousel_view( $post )
 { 
 	$slider_bootstrap_carousel_meta_data = get_post_meta( $post->ID );
 
-	$imageValue = '';
 	if( isset($slider_bootstrap_carousel_meta_data['image_link_id'][0]) ){
 		$imageValue = $slider_bootstrap_carousel_meta_data['image_link_id'][0];
 	}
 
-	$targetValue = '';
 	if( isset($slider_bootstrap_carousel_meta_data['target_link_id'][0]) ){
 		$targetValue = $slider_bootstrap_carousel_meta_data['target_link_id'][0];
 	}

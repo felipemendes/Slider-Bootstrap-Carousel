@@ -49,9 +49,11 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 		<div class="carousel-inner">
 			<?php
 			if ( $banners_query->have_posts() ) : while ( $banners_query->have_posts() ) : $banners_query->the_post();
-				$link = get_post_meta( get_the_ID(), 'image_link_id', true );
-				$target = get_post_meta( get_the_ID(), 'target_link_id', true );
+				
+				$link = get_post_meta( get_the_ID(), 'image_link', true );
+				$target = get_post_meta( get_the_ID(), 'target_link', true );
 				$item_class = $first ? "item active" : "item";
+
 				if ($first) $first = false;
 				?>
 					<div class="carousel-<?=$item_class?>">

@@ -32,8 +32,8 @@ function bcfw_slider_bootstrap_carouse_for_wordpress_init()
 	$labels = array(
 			'name'               	=> _x( $singular, 'post type general name', '' ),
 			'singular_name'      	=> _x( $singular, 'post type singular name', '' ),
-			'add_new'            	=> _x( 'Add', 'print', '' ),
-			'add_new_item'       	=> __( 'Add ' . $singular, '' ),
+			'add_new'            	=> _x( 'Add New', 'print', '' ),
+			'add_new_item'       	=> __( 'Add New ' . $singular, '' ),
 			'edit_item'          	=> __( 'Edit ' . $singular, '' ),
 			'new_item'           	=> __( 'Add ' . $singular, '' ),
 			'all_items'          	=> __( 'All ' . $plural, '' ),

@@ -50,13 +50,14 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 			<?php
 			if ( $banners_query->have_posts() ) : while ( $banners_query->have_posts() ) : $banners_query->the_post();
 				$link = get_post_meta( get_the_ID(), 'image_link_id', true );
+				$target = get_post_meta( get_the_ID(), 'target_link_id', true );
 				$item_class = $first ? "item active" : "item";
 				if ($first) $first = false;
 				?>
 					<div class="carousel-<?=$item_class?>">
 
 						<?php if ( !empty ($link ) ) : ?>
-							<a href="<?=$link;?>">
+							<a href="<?=$link;?>" target="<?=$target;?>">
 								<?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
 							</a>
 						<?php else: ?>

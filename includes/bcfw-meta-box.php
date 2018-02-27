@@ -39,7 +39,7 @@ function bcfw_info_slider_bootstrap_carousel_view( $post )
 		<strong>Link target</strong></label><br>
 
 		<label>
-			<input type="radio" name="target_link_id" value="_blank" <?php checked( $targetValue, '_blank' ); ?>>
+			<input type="radio" name="target_link_id" value="_blank" checked <?php checked( $targetValue, '_blank' ); ?>>
 			_blank <small>(Load in a new window)</small>
 		</label><br>
 

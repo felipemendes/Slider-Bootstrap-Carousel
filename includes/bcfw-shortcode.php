@@ -50,8 +50,10 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 			<?php
 			if ( $banners_query->have_posts() ) : while ( $banners_query->have_posts() ) : $banners_query->the_post();
 				
-				$link = get_post_meta( get_the_ID(), 'image_link', true );
-				$target = get_post_meta( get_the_ID(), 'target_link', true );
+				$link 		= get_post_meta( get_the_ID(), 'image_link', true );
+				$target 	= get_post_meta( get_the_ID(), 'target_link', true );
+				$image_size = get_post_meta( get_the_ID(), 'image_size', true );
+
 				$item_class = $first ? "item active" : "item";
 
 				if ($first) $first = false;
@@ -60,10 +62,10 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 
 						<?php if ( !empty ($link ) ) : ?>
 							<a href="<?=$link;?>" target="<?=$target;?>">
-								<?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
+								<?php the_post_thumbnail('full', array('class' => 'img-fluid ' . $image_size)); ?>
 							</a>
 						<?php else: ?>
-							<?php the_post_thumbnail('full', array('class' => 'img-fluid')); ?>
+							<?php the_post_thumbnail('full', array('class' => 'img-fluid ' . $image_size)); ?>
 						<?php endif; ?>
 
 						<?php if ( has_excerpt() ) : ?>

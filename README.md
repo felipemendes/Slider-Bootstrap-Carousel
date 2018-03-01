@@ -7,6 +7,9 @@ Slider Bootstrap Carousel v4.0.0 for WordPress with image link and categories. T
 <br/>or<br/>
 [slider_bootstrap_carousel category='your-category']
 
+# Download
+[WordPress Plugin - Slider Bootstrap Carousel](https://wordpress.org/plugins/slider-bootstrap-carousel/)
+
 # Installation
 
 1. Upload 'slider-bootstrap-carousel' to the '/wp-content/plugins/' directory

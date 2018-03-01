@@ -12,7 +12,9 @@ Slider Bootstrap Carousel 4 for WordPress with image link and categories.
 
 == Description ==
 
-Slider Bootstrap Carousel v4.0.0 for WordPress with image link and categories. This plugin imports Bootstrap 4 CSS and JS. Shortcode [slider_bootstrap_carousel] or [slider_bootstrap_carousel category='your-category']
+Slider Bootstrap Carousel v4.0.0 for WordPress with image link and categories. This plugin imports Bootstrap 4 CSS and JS.
+
+Shortcode [slider_bootstrap_carousel] or [slider_bootstrap_carousel category='your-category']
 
 == Installation ==
 

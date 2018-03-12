@@ -26,8 +26,8 @@
 add_action('init', 'bcfw_slider_bootstrap_carouse_for_wordpress_init');
 function bcfw_slider_bootstrap_carouse_for_wordpress_init()
 {
-	$singular 	= 'Carousel';
-	$plural 	= 'Carousels';
+	$singular 	= 'Banner';
+	$plural 	= 'Banners';
 
 	$labels = array(
 			'name'               	=> _x( $singular, 'post type general name', '' ),

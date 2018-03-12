@@ -87,3 +87,27 @@ function bcfw_save_meta_info_slider_bootstrap_carousel( $post_id )
 	}
 }
 add_action('save_post', 'bcfw_save_meta_info_slider_bootstrap_carousel');
+
+/* Meta Box: Additional Information */
+
+function bcfw_add_meta_shortcode_slider_bootstrap_carousel()
+{
+	add_meta_box(
+		'shortcode_slider_bootstrap_carousel',
+		'Shortcodes',
+		'bcfw_shortcode_slider_bootstrap_carousel_view',
+		'bootstrap_carousel',
+		'normal',
+		'high'
+	);
+}
+add_action('add_meta_boxes', 'bcfw_add_meta_shortcode_slider_bootstrap_carousel');
+
+/* Meta Box styles */
+
+function bcfw_shortcode_slider_bootstrap_carousel_view()
+{ 
+	?>
+	<div><p for="slider_bootstrap_carousel_link_input"><span>[slider_bootstrap_carousel]</span><br/><span></span>[slider_bootstrap_carousel category='your-category']</span></p></div>
+	<?php
+}

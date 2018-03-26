@@ -58,7 +58,7 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 
 				if ($first) $first = false;
 				?>
-					<div class="carousel-<?=$item_class?>">
+					<div class="<?=$item_class?>">
 
 						<?php if ( !empty ($link ) ) : ?>
 							<a href="<?=$link;?>" target="<?=$target;?>">
@@ -82,12 +82,12 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 			?>
 		</div><!-- carousel-inner -->
 		
-		<a class="carousel-control-prev" href="#slider-bootstrap-carousel" role="button" data-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<a class="left carousel-control" href="#slider-bootstrap-carousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
 			<span class="sr-only">Previous</span>
 		</a>
-		<a class="carousel-control-next" href="#slider-bootstrap-carousel" role="button" data-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<a class="right carousel-control" href="#slider-bootstrap-carousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
 			<span class="sr-only">Next</span>
 		</a>
 	</div><!-- #slider-bootstrap-carousel -->

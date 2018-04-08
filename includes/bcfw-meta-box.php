@@ -108,6 +108,15 @@ add_action('add_meta_boxes', 'bcfw_add_meta_shortcode_slider_bootstrap_carousel'
 function bcfw_shortcode_slider_bootstrap_carousel_view()
 { 
 	?>
-	<div><p for="slider_bootstrap_carousel_link_input"><span>[slider_bootstrap_carousel]</span><br/><span></span>[slider_bootstrap_carousel category='your-category']</span></p></div>
+	<div>
+		<p for="slider_bootstrap_carousel_link_input">
+			<span>[slider_bootstrap_carousel]</span><br/>
+			<span>[slider_bootstrap_carousel category='your-category']</span>
+		</p>
+		<p for="slider_bootstrap_carousel_link_input">
+			Displaying on code
+			<span>do_shortcode("[slider_bootstrap_carousel]")</span>
+		</p>
+	</div>
 	<?php
 }

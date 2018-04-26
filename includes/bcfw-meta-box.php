@@ -111,7 +111,7 @@ function bcfw_shortcode_slider_bootstrap_carousel_view()
 	<div>
 		<p for="slider_bootstrap_carousel_link_input">
 			<span>[slider_bootstrap_carousel]</span><br/>
-			<span>[slider_bootstrap_carousel category='your-category']</span>
+			<span>[slider_bootstrap_carousel category='your_category_slug']</span>
 		</p>
 		<p for="slider_bootstrap_carousel_link_input">
 			Displaying on code

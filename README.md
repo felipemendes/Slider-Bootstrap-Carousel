@@ -8,7 +8,7 @@ Slider Bootstrap Carousel for WordPress with image link and categories. This plu
 ```
 or
 ```
-[slider_bootstrap_carousel category='your-category']
+[slider_bootstrap_carousel category='your_category_slug']
 ```
 
 Displaying on code

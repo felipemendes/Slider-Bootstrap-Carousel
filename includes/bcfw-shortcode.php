@@ -26,25 +26,28 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 
 	$banners_query = new WP_Query( $args );
 
+	$countPosts = $banners_query->post_count;
 	$first = true;
 	$count = 0;
 	?>
 
 	<div id="slider-bootstrap-carousel-<?=$category?>" class="carousel slide" data-ride="carousel">
 
-		<ol class="carousel-indicators">
-			<?php
-			if ( $banners_query->have_posts() ) : while ( $banners_query->have_posts() ) : $banners_query->the_post();
-				$bulletClass = "";
-				if ( $count == 0 ) $bulletClass = "active";
-				?>
-					<li data-target="#slider-bootstrap-carousel-<?=$category?>" data-slide-to="<?=$count?>" class="<?=$bulletClass?>"></li>
-				<?php
-				$count++;
-			endwhile; endif;
-			wp_reset_query();
-			?>
-		</ol>
+		<?php if($countPosts > 1) : ?>
+            <ol class="carousel-indicators">
+                <?php
+                if ( $banners_query->have_posts() ) : while ( $banners_query->have_posts() ) : $banners_query->the_post();
+                    $bulletClass = "";
+                    if ( $count == 0 ) $bulletClass = "active";
+                    ?>
+                        <li data-target="#slider-bootstrap-carousel-<?=$category?>" data-slide-to="<?=$count?>" class="<?=$bulletClass?>"></li>
+                    <?php
+                    $count++;
+                endwhile; endif;
+                wp_reset_query();
+                ?>
+            </ol>
+        <?php endif; ?>
 		
 		<div class="carousel-inner">
 			<?php
@@ -82,14 +85,17 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 			?>
 		</div><!-- carousel-inner -->
 		
-		<a class="carousel-control-prev" href="#slider-bootstrap-carousel-<?=$category?>" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#slider-bootstrap-carousel-<?=$category?>" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
+		<?php if($countPosts > 1) : ?>
+			<a class="carousel-control-prev" href="#slider-bootstrap-carousel-<?=$category?>" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#slider-bootstrap-carousel-<?=$category?>" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		<?php endif; ?>
+		
 	</div><!-- #slider-bootstrap-carousel-<?=$category?> -->
 	
 <?php

@@ -54,7 +54,7 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 				$target 	= get_post_meta( get_the_ID(), 'target_link', true );
 				$image_size = get_post_meta( get_the_ID(), 'image_size', true );
 
-				$item_class = $first ? "item active" : "item";
+				$item_class = $first ? "carousel-item active" : "carousel-item";
 
 				if ($first) $first = false;
 				?>
@@ -82,14 +82,14 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 			?>
 		</div><!-- carousel-inner -->
 		
-		<a class="left carousel-control" href="#slider-bootstrap-carousel-<?=$category?>" data-slide="prev">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-			<span class="sr-only">Previous</span>
-		</a>
-		<a class="right carousel-control" href="#slider-bootstrap-carousel-<?=$category?>" data-slide="next">
-			<span class="glyphicon glyphicon-chevron-right"></span>
-			<span class="sr-only">Next</span>
-		</a>
+		<a class="carousel-control-prev" href="#slider-bootstrap-carousel-<?=$category?>" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#slider-bootstrap-carousel-<?=$category?>" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
 	</div><!-- #slider-bootstrap-carousel-<?=$category?> -->
 	
 <?php

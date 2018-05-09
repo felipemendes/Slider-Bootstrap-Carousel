@@ -35,37 +35,37 @@ function bcfw_info_slider_bootstrap_carousel_view( $post )
 
 	?>
 	<div>
-		<label for="slider_bootstrap_carousel_link_input"><strong>Image link</strong></label>
+		<label for="slider_bootstrap_carousel_link_input"><strong><?php _e('Image link', 'slider-bootstrap-carousel') ?></strong></label>
 		<input id="slider_bootstrap_carousel_link_input" type="text" name="image_link" style="width:100%;" value="<?= $imageValue; ?>">
 	</div><br>
 	
 	<div>
 		<label for="slider_bootstrap_carousel_target_link">
-		<strong>Link target</strong></label><br>
+		<strong><?php _e('Link target', 'slider-bootstrap-carousel') ?></strong></label><br>
 
 		<label>
 			<input type="radio" name="target_link" value="_self" checked <?php checked( $targetValue, '_self' ); ?>>
-			_self <small>(Load in the same frame as it was clicked)</small>
+			_self <small>(<?php _e('Load in the same frame as it was clicked', 'slider-bootstrap-carousel') ?>)</small>
 		</label><br>
 
 		<label>
 			<input type="radio" name="target_link" value="_blank" <?php checked( $targetValue, '_blank' ); ?>>
-			_blank <small>(Load in a new window)</small>
+			_blank <small>(<?php _e('Load in a new window', 'slider-bootstrap-carousel') ?>)</small>
 		</label><br>
 	</div><br>
 
 	<div>
 		<label for="slider_bootstrap_carousel_image_size">
-		<strong>Image size</strong></label><br>
+		<strong><?php _e('Image size', 'slider-bootstrap-carousel') ?></strong></label><br>
 
 		<label>
 			<input type="radio" name="image_size" value="d-block" checked <?php checked( $sizeValue, 'd-block' ); ?>>
-			Normal
+			<?php _e('Normal', 'slider-bootstrap-carousel') ?>
 		</label><br>
 
 		<label>
 			<input type="radio" name="image_size" value="d-block w-100" <?php checked( $sizeValue, 'd-block w-100' ); ?>>
-			Fullscreen
+			<?php _e('Fullscreen', 'slider-bootstrap-carousel') ?>
 		</label><br>
 	</div>
 
@@ -114,7 +114,7 @@ function bcfw_shortcode_slider_bootstrap_carousel_view()
 			<span>[slider_bootstrap_carousel category='your_category_slug']</span>
 		</p>
 		<p for="slider_bootstrap_carousel_link_input">
-			Displaying on code
+			<?php _e('Displaying on code', 'slider-bootstrap-carousel') ?>
 			<span>do_shortcode("[slider_bootstrap_carousel]")</span>
 		</p>
 	</div>

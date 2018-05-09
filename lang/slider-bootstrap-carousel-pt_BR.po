@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Slider Bootstrap Carousel\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-09 01:21+0000\n"
-"PO-Revision-Date: 2018-05-09 01:23+0000\n"
+"POT-Creation-Date: 2018-05-09 01:28+0000\n"
+"PO-Revision-Date: 2018-05-09 01:29+0000\n"
 "Last-Translator: suporte <f.ribeiromendes@gmail.com>\n"
 "Language-Team: Português do Brasil\n"
 "Language: pt_BR\n"
@@ -13,9 +13,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
+#: includes/bcfw-meta-box.php:38
+msgid "Image link"
+msgstr "Link da imagem"
+
+#: includes/bcfw-meta-box.php:44
+msgid "Link target"
+msgstr "Destino do link"
+
 #: includes/bcfw-meta-box.php:48
 msgid "Load in the same frame as it was clicked"
 msgstr "Carrega na mesma página que foi clicado"
+
+#: includes/bcfw-meta-box.php:53
+msgid "Load in a new window"
+msgstr "Carrega em nova janela"
+
+#: includes/bcfw-meta-box.php:59
+msgid "Image size"
+msgstr "Tamanho da imagem"
+
+#: includes/bcfw-meta-box.php:63
+msgid "Normal"
+msgstr "Normal"
+
+#: includes/bcfw-meta-box.php:68
+msgid "Fullscreen"
+msgstr "Tela cheia"
+
+#: includes/bcfw-meta-box.php:117
+msgid "Displaying on code"
+msgstr "Exibindo no código"
 
 #. Name of the plugin
 msgid "Slider Bootstrap Carousel"

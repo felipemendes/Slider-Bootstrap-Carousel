@@ -83,3 +83,8 @@ include 'includes/bcfw-plugin-scripts.php';
 /* Shortcode */
 
 include 'includes/bcfw-shortcode.php';
+
+add_action('plugins_loaded', 'wip_load_textdomain');
+function wip_load_textdomain() {
+	load_plugin_textdomain( 'slider-bootstrap-carousel', false, dirname( plugin_basename(__FILE__) ) . '/lang/' );
+}

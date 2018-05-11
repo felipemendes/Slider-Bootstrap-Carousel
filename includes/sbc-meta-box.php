@@ -2,22 +2,22 @@
 
 /* Meta Box: Additional Information */
 
-function bcfw_add_meta_info_slider_bootstrap_carousel()
+function sbc_add_meta_info_slider_bootstrap_carousel()
 {
 	add_meta_box(
 		'info_slider_bootstrap_carousel',
 		'Additional Information',
-		'bcfw_info_slider_bootstrap_carousel_view',
+		'sbc_info_slider_bootstrap_carousel_view',
 		'bootstrap_carousel',
 		'normal',
 		'high'
 	);
 }
-add_action('add_meta_boxes', 'bcfw_add_meta_info_slider_bootstrap_carousel');
+add_action('add_meta_boxes', 'sbc_add_meta_info_slider_bootstrap_carousel');
 
 /* Meta Box styles */
 
-function bcfw_info_slider_bootstrap_carousel_view( $post )
+function sbc_info_slider_bootstrap_carousel_view( $post )
 { 
 	$slider_bootstrap_carousel_meta_data = get_post_meta( $post->ID );
 
@@ -74,7 +74,7 @@ function bcfw_info_slider_bootstrap_carousel_view( $post )
 
 /* Update Post Meta: Additional Information */
 
-function bcfw_save_meta_info_slider_bootstrap_carousel( $post_id )
+function sbc_save_meta_info_slider_bootstrap_carousel( $post_id )
 {
 	if( isset($_POST['image_link']) ) {
 		update_post_meta( $post_id, 'image_link', sanitize_text_field( $_POST['image_link'] ) );
@@ -86,26 +86,26 @@ function bcfw_save_meta_info_slider_bootstrap_carousel( $post_id )
 		update_post_meta( $post_id, 'image_size', sanitize_text_field( $_POST['image_size'] ) ); 
 	}
 }
-add_action('save_post', 'bcfw_save_meta_info_slider_bootstrap_carousel');
+add_action('save_post', 'sbc_save_meta_info_slider_bootstrap_carousel');
 
 /* Meta Box: Additional Information */
 
-function bcfw_add_meta_shortcode_slider_bootstrap_carousel()
+function sbc_add_meta_shortcode_slider_bootstrap_carousel()
 {
 	add_meta_box(
 		'shortcode_slider_bootstrap_carousel',
 		'Shortcodes',
-		'bcfw_shortcode_slider_bootstrap_carousel_view',
+		'sbc_shortcode_slider_bootstrap_carousel_view',
 		'bootstrap_carousel',
 		'normal',
 		'high'
 	);
 }
-add_action('add_meta_boxes', 'bcfw_add_meta_shortcode_slider_bootstrap_carousel');
+add_action('add_meta_boxes', 'sbc_add_meta_shortcode_slider_bootstrap_carousel');
 
 /* Meta Box styles */
 
-function bcfw_shortcode_slider_bootstrap_carousel_view()
+function sbc_shortcode_slider_bootstrap_carousel_view()
 { 
 	?>
 	<div>

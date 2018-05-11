@@ -23,8 +23,8 @@
  * Text Domain:       slider-bootstrap-carousel
  */
 
-add_action('init', 'bcfw_slider_bootstrap_carouse_for_wordpress_init');
-function bcfw_slider_bootstrap_carouse_for_wordpress_init()
+add_action('init', 'sbc_slider_bootstrap_carouse_for_wordpress_init');
+function sbc_slider_bootstrap_carouse_for_wordpress_init()
 {
 	$singular 	= 'Banner';
 	$plural 	= 'Banners';
@@ -70,19 +70,19 @@ add_theme_support('post-thumbnails');
 
 /* Meta Box */
 
-include 'includes/bcfw-meta-box.php';
+include 'includes/sbc-meta-box.php';
 
 /* Taxonomy Category */
 
-include 'includes/bcfw-taxonomy-category.php';
+include 'includes/sbc-taxonomy-category.php';
 
 /* Bootstrap imports */
 
-include 'includes/bcfw-plugin-scripts.php';
+include 'includes/sbc-plugin-scripts.php';
 
 /* Shortcode */
 
-include 'includes/bcfw-shortcode.php';
+include 'includes/sbc-shortcode.php';
 
 add_action('plugins_loaded', 'wip_load_textdomain');
 function wip_load_textdomain() {

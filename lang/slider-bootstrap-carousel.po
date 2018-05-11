@@ -13,6 +13,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: ../includes/bcfw-meta-box.php:48
+#: ../includes/sbc-meta-box.php:48
 msgid "Load in the same frame as it was clicked"
 msgstr ""

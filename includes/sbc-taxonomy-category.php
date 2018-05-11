@@ -2,7 +2,7 @@
 
 /* Taxonomy Category */
 
-function bcfw_slider_bootstrap_carousel_category()
+function sbc_slider_bootstrap_carousel_category()
 {
 	$singular = 'Category';
 	$plural = 'Categories';
@@ -38,4 +38,4 @@ function bcfw_slider_bootstrap_carousel_category()
 	);
 	register_taxonomy( 'taxonomy_category', array( 'bootstrap_carousel' ), $args );
 }
-add_action( 'init', 'bcfw_slider_bootstrap_carousel_category', 0 );
+add_action( 'init', 'sbc_slider_bootstrap_carousel_category', 0 );

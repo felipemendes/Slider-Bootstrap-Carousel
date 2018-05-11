@@ -2,7 +2,7 @@
 
 /* Shortcode */
 
-function bcfw_slider_bootstrap_carousel_function( $atts )
+function sbc_slider_bootstrap_carousel_function( $atts )
 {
     extract( shortcode_atts( array( 'category' => '' ), $atts ) );
 
@@ -100,4 +100,4 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
     
 <?php
 }
-add_shortcode('slider_bootstrap_carousel', 'bcfw_slider_bootstrap_carousel_function');
+add_shortcode('slider_bootstrap_carousel', 'sbc_slider_bootstrap_carousel_function');

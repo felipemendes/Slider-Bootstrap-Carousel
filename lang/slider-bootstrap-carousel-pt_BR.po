@@ -13,35 +13,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Loco https://localise.biz/"
 
-#: includes/bcfw-meta-box.php:38
+#: includes/sbc-meta-box.php:38
 msgid "Image link"
 msgstr "Link da imagem"
 
-#: includes/bcfw-meta-box.php:44
+#: includes/sbc-meta-box.php:44
 msgid "Link target"
 msgstr "Destino do link"
 
-#: includes/bcfw-meta-box.php:48
+#: includes/sbc-meta-box.php:48
 msgid "Load in the same frame as it was clicked"
 msgstr "Carrega na mesma página que foi clicado"
 
-#: includes/bcfw-meta-box.php:53
+#: includes/sbc-meta-box.php:53
 msgid "Load in a new window"
 msgstr "Carrega em nova janela"
 
-#: includes/bcfw-meta-box.php:59
+#: includes/sbc-meta-box.php:59
 msgid "Image size"
 msgstr "Tamanho da imagem"
 
-#: includes/bcfw-meta-box.php:63
+#: includes/sbc-meta-box.php:63
 msgid "Normal"
 msgstr "Normal"
 
-#: includes/bcfw-meta-box.php:68
+#: includes/sbc-meta-box.php:68
 msgid "Fullscreen"
 msgstr "Tela cheia"
 
-#: includes/bcfw-meta-box.php:117
+#: includes/sbc-meta-box.php:117
 msgid "Displaying on code"
 msgstr "Exibindo no código"
 

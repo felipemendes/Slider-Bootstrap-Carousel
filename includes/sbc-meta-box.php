@@ -6,7 +6,7 @@ function sbc_add_meta_info_slider_bootstrap_carousel()
 {
 	add_meta_box(
 		'info_slider_bootstrap_carousel',
-		'Additional Information',
+		__('Additional Information', 'slider-bootstrap-carousel'),
 		'sbc_info_slider_bootstrap_carousel_view',
 		'bootstrap_carousel',
 		'normal',

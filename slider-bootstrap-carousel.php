@@ -26,23 +26,22 @@
 add_action('init', 'sbc_slider_bootstrap_carouse_for_wordpress_init');
 function sbc_slider_bootstrap_carouse_for_wordpress_init()
 {
-	$singular 	= 'Banner';
-	$plural 	= 'Banners';
+	$singular 	= 'Slider';
+	$plural 	= 'Sliders';
 
 	$labels = array(
-			'name'               	=> _x( $singular, 'post type general name', '' ),
-			'singular_name'      	=> _x( $singular, 'post type singular name', '' ),
-			'add_new'            	=> _x( 'Add New', 'print', '' ),
-			'add_new_item'       	=> __( 'Add New ' . $singular, '' ),
-			'edit_item'          	=> __( 'Edit ' . $singular, '' ),
-			'new_item'           	=> __( 'Add ' . $singular, '' ),
-			'all_items'          	=> __( 'All ' . $plural, '' ),
-			'view_item'          	=> __( 'View ' . $singular, '' ),
-			'search_items'       	=> __( 'Search ' . $plural, '' ),
-			'not_found'          	=> __( 'No ' . $singular . ' found', '' ),
-			'not_found_in_trash' 	=> __( 'No ' . $singular . ' found in Trash', '' ), 
-			'parent_item_colon'  	=> '',
-			'menu_name'          	=> __( $plural, '' )
+			'name'               	=> _x( $singular, 'slider-bootstrap-carousel' ),
+			'singular_name'      	=> _x( $singular, 'slider-bootstrap-carousel' ),
+			'add_new'            	=> _x( 'Add New', 'print', 'slider-bootstrap-carousel' ),
+			'add_new_item'       	=> sprintf(__( 'Add New %s', 'slider-bootstrap-carousel' ), $singular),
+			'edit_item'          	=> sprintf(__( 'Edit %s', 'slider-bootstrap-carousel' ), $singular),
+			'new_item'           	=> sprintf(__( 'Add %s', 'slider-bootstrap-carousel' ), $singular),
+			'all_items'          	=> sprintf(__( 'All %s', 'slider-bootstrap-carousel' ), $plural),
+			'view_item'          	=> sprintf(__( 'View %s', 'slider-bootstrap-carousel' ), $singular),
+			'search_items'       	=> sprintf(__( 'Search %s', 'slider-bootstrap-carousel' ), $plural),
+			'not_found'          	=> sprintf(__( 'No %s found', 'slider-bootstrap-carousel' ), $singular),
+			'not_found_in_trash' 	=> sprintf(__( 'No %s found in Trash', 'slider-bootstrap-carousel' , $singular)),
+			'menu_name'          	=> sprintf(__( $plural, 'slider-bootstrap-carousel' ), $singular)
 	);
 	
 	$args = array(

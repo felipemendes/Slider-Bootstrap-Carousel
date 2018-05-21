@@ -4,27 +4,27 @@
 
 function sbc_slider_bootstrap_carousel_category()
 {
-	$singular = 'Category';
-	$plural = 'Categories';
+	$singular = __('Category', 'slider-bootstrap-carousel');
+	$plural = __('Categories', 'slider-bootstrap-carousel');
 
 	$labels = array(
-		'name'                       => _x( $singular, 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( $singular, 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( $singular, 'text_domain' ),
-		'all_items'                  => __( 'All ' . $plural, 'text_domain' ),
-		'parent_item'                => __( 'Parent ' . $singular, 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent ' . $singular, 'text_domain' ),
-		'new_item_name'              => __( 'New ' . $singular, 'text_domain' ),
-		'add_new_item'               => __( 'Add New ' . $singular, 'text_domain' ),
-		'edit_item'                  => __( 'Edit ' . $singular, 'text_domain' ),
-		'update_item'                => __( 'Update ' . $singular, 'text_domain' ),
-		'view_item'                  => __( 'View ' . $singular, 'text_domain' ),
-		'separate_items_with_commas' => __( 'Separate ' . $plural . ' com vírgulas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove ' . $singular, 'text_domain' ),
-		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular ' . $plural . '', 'text_domain' ),
-		'search_items'               => __( 'Search ' . $singular, 'text_domain' ),
-		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'name'                       => _x( $singular, 'Taxonomy General Name', 'slider-bootstrap-carousel' ),
+		'singular_name'              => _x( $singular, 'Taxonomy Singular Name', 'slider-bootstrap-carousel' ),
+		'menu_name'                  => _x( $singular, 'slider-bootstrap-carousel' ),
+		'all_items'                  => sprintf(__( 'All %s', 'slider-bootstrap-carousel' ), $plural),
+		'parent_item'                => sprintf(__( 'Parent %s', 'slider-bootstrap-carousel' ), $singular),
+		'parent_item_colon'          => sprintf(__( 'Parent %s', 'slider-bootstrap-carousel' ), $singular),
+		'new_item_name'              => sprintf(__( 'New %s', 'slider-bootstrap-carousel' ), $singular),
+		'add_new_item'               => sprintf(__( 'Add new %s', 'slider-bootstrap-carousel' ), $singular),
+		'edit_item'                  => sprintf(__( 'Edit %s', 'slider-bootstrap-carousel' ), $singular),
+		'update_item'                => sprintf(__( 'Update %s', 'slider-bootstrap-carousel' ), $singular),
+		'view_item'                  => sprintf(__( 'View %s', 'slider-bootstrap-carousel' ), $singular),
+		'separate_items_with_commas' => sprintf(__( 'Separate %s with commas', 'slider-bootstrap-carousel' ), $plural),
+		'add_or_remove_items'        => sprintf(__( 'Add or remove %s', 'slider-bootstrap-carousel' ), $singular),
+		'choose_from_most_used'      => sprintf(__( 'Choose from the most used', 'slider-bootstrap-carousel' )),
+		'popular_items'              => sprintf(__( 'Popular %s', 'slider-bootstrap-carousel' ), $plural),
+		'search_items'               => sprintf(__( 'Search %s', 'slider-bootstrap-carousel' ), $singular),
+		'not_found'                  => sprintf(__( 'Not Found', 'slider-bootstrap-carousel' )),
 	);
 	
 	$args = array(

@@ -59,14 +59,15 @@ function sbc_info_slider_bootstrap_carousel_view( $post )
 		<strong><?php _e('Image size', 'slider-bootstrap-carousel') ?></strong></label><br>
 
 		<label>
-			<input type="radio" name="image_size" value="d-block" checked <?php checked( $sizeValue, 'd-block' ); ?>>
-			<?php _e('Normal', 'slider-bootstrap-carousel') ?>
+			<input type="radio" name="image_size" value="d-block w-100" checked <?php checked( $sizeValue, 'd-block w-100' ); ?>>
+			<?php _e('Full Width', 'slider-bootstrap-carousel') ?>
 		</label><br>
 
 		<label>
-			<input type="radio" name="image_size" value="d-block w-100" <?php checked( $sizeValue, 'd-block w-100' ); ?>>
-			<?php _e('Fullscreen', 'slider-bootstrap-carousel') ?>
+			<input type="radio" name="image_size" value="d-block" <?php checked( $sizeValue, 'd-block' ); ?>>
+			<?php _e('Normal', 'slider-bootstrap-carousel') ?>
 		</label><br>
+
 	</div>
 
 	<?php

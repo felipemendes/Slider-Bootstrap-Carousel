@@ -26,8 +26,8 @@
 add_action('init', 'sbc_slider_bootstrap_carouse_for_wordpress_init');
 function sbc_slider_bootstrap_carouse_for_wordpress_init()
 {
-	$singular 	= 'Slider';
-	$plural 	= 'Sliders';
+	$singular 	= 'Carousel';
+	$plural 	= 'Carousels';
 
 	$labels = array(
 			'name'               	=> _x( $singular, 'slider-bootstrap-carousel' ),

@@ -4,7 +4,7 @@
 
 function sbc_slider_bootstrap_carousel_function( $atts )
 {
-    extract( shortcode_atts( array( 'category' => '' ), $atts ) );
+    extract( shortcode_atts( array( 'category' => '', 'template' => '' ), $atts ) );
 
     $args = array(
         'post_type' => 'bootstrap_carousel',
@@ -31,7 +31,7 @@ function sbc_slider_bootstrap_carousel_function( $atts )
     $count = 0;
     ?>
 
-    <div id="slider-bootstrap-carousel-<?=$category?>" class="carousel slide" data-ride="carousel">
+    <div id="slider-bootstrap-carousel-<?=$category?>" class="carousel slide w-100" data-ride="carousel">
 
         <?php if($countPosts > 1) : ?>
             <ol class="carousel-indicators">
@@ -53,9 +53,10 @@ function sbc_slider_bootstrap_carousel_function( $atts )
             <?php
             if ( $banners_query->have_posts() ) : while ( $banners_query->have_posts() ) : $banners_query->the_post();
                 
-                $link       = get_post_meta( get_the_ID(), 'image_link', true );
-                $target     = get_post_meta( get_the_ID(), 'target_link', true );
-                $image_size = get_post_meta( get_the_ID(), 'image_size', true );
+                $link           = get_post_meta( get_the_ID(), 'image_link', true );
+                $target         = get_post_meta( get_the_ID(), 'target_link', true );
+                $image_size     = get_post_meta( get_the_ID(), 'image_size', true );
+                $classTemplate  = ($template == '') ? 'carousel-caption' : $template;
 
                 $item_class = $first ? "carousel-item active" : "carousel-item";
 
@@ -72,7 +73,7 @@ function sbc_slider_bootstrap_carousel_function( $atts )
                         <?php endif; ?>
 
                         <?php if ( has_excerpt() ) : ?>
-                            <div class="carousel-caption d-none d-md-block">
+                            <div class="<?=$classTemplate?> d-none d-md-block">
                                 <h5><?=the_title();?></h5>
                                 <p><?=the_excerpt();?></p>
                             </div>

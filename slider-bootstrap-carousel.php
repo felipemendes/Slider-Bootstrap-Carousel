@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       Slider Bootstrap Carousel
  * Description:       Slider Bootstrap 4 Carousel
- * Version: 		  1.0.3
+ * Version: 		  1.0.5
  * Author:            Felipe Mendes
  * Author URI:        https://github.com/felipemendes
  * License:           GPL-2.0+

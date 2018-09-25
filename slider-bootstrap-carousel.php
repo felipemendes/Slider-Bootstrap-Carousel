@@ -40,7 +40,7 @@ function sbc_slider_bootstrap_carouse_for_wordpress_init()
 			'view_item'          	=> sprintf(__( 'View %s', 'slider-bootstrap-carousel' ), $singular),
 			'search_items'       	=> sprintf(__( 'Search %s', 'slider-bootstrap-carousel' ), $plural),
 			'not_found'          	=> sprintf(__( 'No %s found', 'slider-bootstrap-carousel' ), $singular),
-			'not_found_in_trash' 	=> sprintf(__( 'No %s found in Trash', 'slider-bootstrap-carousel' , $singular)),
+			'not_found_in_trash' 	=> sprintf(__( 'No %s found in Trash', 'slider-bootstrap-carousel' ), $singular),
 			'menu_name'          	=> sprintf(__( $plural, 'slider-bootstrap-carousel' ), $singular)
 	);
 	

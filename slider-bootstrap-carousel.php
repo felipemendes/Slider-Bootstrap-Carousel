@@ -23,6 +23,7 @@
  * Text Domain:       slider-bootstrap-carousel
  */
 
+require_once('includes/lib/multi-post-thumbnails/multi-post-thumbnails.php');
 add_action('init', 'sbc_slider_bootstrap_carouse_for_wordpress_init');
 function sbc_slider_bootstrap_carouse_for_wordpress_init()
 {
@@ -61,6 +62,14 @@ function sbc_slider_bootstrap_carouse_for_wordpress_init()
 			'supports'           	=> array( 'title', 'thumbnail', 'excerpt' )
 	); 
 	register_post_type('bootstrap_carousel', $args);
+	
+	if (class_exists('MultiPostThumbnails')) {
+		new MultiPostThumbnails(array(
+		'label' => 'Imagem Mobile',
+		'id' => 'secondary-image',
+		'post_type' => 'bootstrap_carousel'
+		) );
+	}
 }
 
 /* Thumbnails support */

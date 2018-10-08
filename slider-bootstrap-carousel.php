@@ -22,7 +22,7 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       slider-bootstrap-carousel
  */
-
+require_once('includes/lib/multi-post-thumbnails/multi-post-thumbnails.php');
 add_action('init', 'bcfw_slider_bootstrap_carouse_for_wordpress_init');
 function bcfw_slider_bootstrap_carouse_for_wordpress_init()
 {
@@ -62,6 +62,13 @@ function bcfw_slider_bootstrap_carouse_for_wordpress_init()
 			'supports'           	=> array( 'title', 'thumbnail', 'excerpt' )
 	); 
 	register_post_type('bootstrap_carousel', $args);
+	if (class_exists('MultiPostThumbnails')) {
+		new MultiPostThumbnails(array(
+		'label' => 'Imagem Mobile',
+		'id' => 'secondary-image',
+		'post_type' => 'bootstrap_carousel'
+		) );
+	}
 }
 
 /* Thumbnails support */

@@ -57,26 +57,41 @@ function bcfw_slider_bootstrap_carousel_function( $atts )
 				$item_class = $first ? "item active" : "item";
 
 				if ($first) $first = false;
-				?>
-					<div class="<?=$item_class?>">
 
-						<?php if ( !empty ($link ) ) : ?>
-							<a href="<?=$link;?>" target="<?=$target;?>">
-								<?php the_post_thumbnail('full', array('class' => 'img-fluid ' . $image_size)); ?>
-							</a>
-						<?php else: ?>
-							<?php the_post_thumbnail('full', array('class' => 'img-fluid ' . $image_size)); ?>
-						<?php endif; ?>
+                if(wp_is_mobile()){
+                    ?>
+                        <div class="<?=$item_class?>">
+                            <?php if ( !empty ($link ) ) : ?>
+                                <a href="<?=$link;?>" target="<?=$target;?>">
+                                    <img alt="<?php get_the_title()?>" src="<?php echo MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), 'secondary-image', NULL, 'medium');?>" class="img-responsive"/>
+                                </a>
+                            <?php else: ?>
+                            <img alt="<?php get_the_title()?>" src="<?php echo MultiPostThumbnails::get_post_thumbnail_url(get_post_type(), 'secondary-image', NULL, 'medium');?>" class="img-responsive"/>
+                            <?php endif; ?>
+                        </div><!-- carousel-item -->
+                    <?php
+                }
+                else {
+                    ?>
+                        <div class="<?=$item_class?>">
+                            <?php if ( !empty ($link ) ) : ?>
+                                <a href="<?=$link;?>" target="<?=$target;?>">
+                                    <?php the_post_thumbnail('full', array('class' => 'img-fluid ' . $image_size)); ?>
+                                </a>
+                            <?php else: ?>
+                                <?php the_post_thumbnail('full', array('class' => 'img-fluid ' . $image_size)); ?>
+                            <?php endif; ?>
 
-						<?php if ( has_excerpt() ) : ?>
-							<div class="carousel-caption d-none d-md-block">
-								<h5><?=the_title();?></h5>
-								<p><?=the_excerpt();?></p>
-							</div>
-						<?php endif; ?>
+                            <?php if ( has_excerpt() ) : ?>
+                                <div class="<?=$classTemplate?> d-none d-md-block">
+                                    <h5><?=the_title();?></h5>
+                                    <p><?=the_excerpt();?></p>
+                                </div>
+                            <?php endif; ?>
 
-					</div><!-- carousel-item -->
-				<?php
+                        </div><!-- carousel-item -->
+                    <?php
+				}
 			endwhile; endif;
 			wp_reset_postdata();
 			?>

@@ -30,6 +30,8 @@ function sbc_slider_bootstrap_carousel_function( $atts )
     $countPosts = $banners_query->post_count;
     $first = true;
     $count = 0;
+
+    ob_start();
     ?>
 
     <div id="slider-bootstrap-carousel-<?=$category?>" class="carousel slide w-100" data-ride="carousel">
@@ -116,5 +118,8 @@ function sbc_slider_bootstrap_carousel_function( $atts )
     </div><!-- #slider-bootstrap-carousel -->
     
 <?php
+
+return ob_get_clean();
+
 }
 add_shortcode('slider_bootstrap_carousel', 'sbc_slider_bootstrap_carousel_function');

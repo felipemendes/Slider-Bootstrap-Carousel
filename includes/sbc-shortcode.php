@@ -8,9 +8,10 @@ function sbc_slider_bootstrap_carousel_function( $atts )
 
     $args = array(
         'post_type' => 'bootstrap_carousel',
-        'orderby'   => 'date',
-        'status'    => 'publish',
-        'limit'     => -1
+        'orderby' => 'date',
+        'status' => 'publish',
+        'limit' => -1,
+        'posts_per_page' => -1
     );
 
     if( $category != '' )
